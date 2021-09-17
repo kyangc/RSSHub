@@ -2359,7 +2359,16 @@
             },
         ],
     },
-
+    'feeddd.org': {
+        _name: 'Feeddd',
+        '.': [
+            {
+                title: '订阅 Feed',
+                source: '/feeds/:id',
+                target: '/wechat/feeds/:id'
+            }
+        ]
+    },
     'yuque.com': {
         _name: '语雀',
         www: [

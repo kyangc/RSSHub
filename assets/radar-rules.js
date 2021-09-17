@@ -2365,7 +2365,7 @@
             {
                 title: '订阅 Feed',
                 source: '/feeds/:id',
-                target: '/wechat/feeds/:id'
+                target: '/wechat/feeddd/:id'
             }
         ]
     },

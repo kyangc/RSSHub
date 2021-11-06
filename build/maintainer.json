@@ -396,7 +396,6 @@
     "/wechat/mp/homepage/:biz/:hid/:cid?": [],
     "/wechat/mp/msgalbum/:biz/:aid": [],
     "/wechat/feeds/:id": [],
-    "/wechat/feeddd/:id": [],
     "/atfd/:locations/:nearby?": [],
     "/fir/update/:id": [],
     "/nvidia/webdriverupdate": [],

@@ -1,6 +1,6 @@
 FROM node:14-buster-slim as dep-builder
 
-LABEL MAINTAINER https://github.com/DIYgod/RSSHub/
+LABEL MAINTAINER KYANGC
 
 ARG USE_CHINA_NPM_REGISTRY=0;
 ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1;
@@ -17,11 +17,12 @@ RUN if [ "$USE_CHINA_NPM_REGISTRY" = 1 ]; then \
   fi;
 
 RUN npm i -g npm
+RUN npm i -g yarn
 
 RUN if [ "$PUPPETEER_SKIP_CHROMIUM_DOWNLOAD" = 0 ]; then \
-  unset PUPPETEER_SKIP_CHROMIUM_DOWNLOAD && npm ci ;\
+  unset PUPPETEER_SKIP_CHROMIUM_DOWNLOAD && yarn install --frozen-lockfile ;\
   else \
-  export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true && npm ci ;\
+  export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true && yarn install --frozen-lockfile ;\
   fi;
 
 RUN node scripts/docker/minify-docker.js

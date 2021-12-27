@@ -6,6 +6,7 @@ on:
 
 jobs:
   comment:
+    if: github.repository == 'DIYgod/RSSHub'
     runs-on: ubuntu-latest
     steps:
       - name: Comment

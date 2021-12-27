@@ -9,9 +9,9 @@ on:
       - 'Dockerfile'
       - 'package.json'
 
-  # Please, always create a pull request instead of push to master.
 jobs:
   test:
+    if: github.repository == 'DIYgod/RSSHub'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

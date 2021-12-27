@@ -1,4 +1,4 @@
-name: build assets
+name: 'build assets'
 
 on:
   push:

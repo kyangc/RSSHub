@@ -19,7 +19,7 @@ afterAll(() => {
 describe('debug', () => {
     it('debug', async () => {
         const response1 = await request.get('/test/1').set('X-Forwarded-For', '233.233.233.233');
-        const etag = response1.headers.etag;
+        const etag = response1.headers.etag || '';
         await request.get('/test/1').set('If-None-Match', etag).set('X-Forwarded-For', '233.233.233.233');
         await request.get('/test/1').set('X-Forwarded-For', '233.233.233.234');
         await request.get('/test/2').set('X-Forwarded-For', '233.233.233.233');

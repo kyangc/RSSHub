@@ -23,6 +23,9 @@
     "/aamacau/aamacau/:category?/:id?": [
         "nczitzk"
     ],
+    "/anysite/:scheme": [
+        "kyangc"
+    ],
     "/ash-maurya/ash-maurya": [
         "james-tindal"
     ],
@@ -264,6 +267,9 @@
     ],
     "/nsfc/news/:type?": [
         "Derekmini"
+    ],
+    "/oncc/:language/:channel?": [
+        "Fatpandac"
     ],
     "/people/liuyan/:id/:state?": [
         "nczitzk"

@@ -20,5 +20,5 @@ Session.vim
 .now
 .vercel
 
-assets/build/
+#assets/build/
 package-lock.json

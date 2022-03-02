@@ -3280,10 +3280,14 @@
         docs:"https://docs.rsshub.app/new-media.html#wo-cao-wen-jian-lie-biao",
         source:[ "/" ],
         target:"/watchout" } ] },
-  "feeddd.org":{ _name:"微信",
-    ".":[ { title:"公众号 (feeddd 来源)",
+  "feeddd.org":{ _name:"Feeddd 公众号 RSS",
+    ".":[ { title:"Feeddd 公众号 RSS",
         docs:"https://docs.rsshub.app/new-media.html#wei-xin",
-        source:[ "/" ] } ] },
+        source:[ "/feeds/:id" ],
+        target:({ id }) => {
+                    const lastChar = (parseInt(id.substr(-1), 16) + 0x3).toString(16)
+                    return `/wechat/feeddd/${id.substr(0, id.length - 1)}${lastChar}`
+                } } ] },
   "wenku8.net":{ _name:"轻小说文库",
     www:[ { title:"轻小说列表",
         docs:"https://docs.rsshub.app/reading.html#qing-xiao-shuo-wen-ku-shou-ye-fen-lei",

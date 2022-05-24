@@ -94,7 +94,7 @@ COPY --from=dep-version-parser /ver/.puppeteer_version /app/.puppeteer_version
 
 ARG TARGETPLATFORM
 ARG USE_CHINA_NPM_REGISTRY=0
-ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0
 # The official recommended way to use Puppeteer on x86(_64) is to use the bundled Chromium from Puppeteer:
 # https://github.com/puppeteer/puppeteer#q-why-doesnt-puppeteer-vxxx-work-with-chromium-vyyy
 RUN \
@@ -125,7 +125,7 @@ WORKDIR /app
 
 # install deps first to avoid cache miss or disturbing buildkit to build concurrently
 ARG TARGETPLATFORM
-ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0
 # https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#chrome-headless-doesnt-launch-on-unix
 # https://github.com/puppeteer/puppeteer/issues/7822
 # https://www.debian.org/releases/bullseye/amd64/release-notes/ch-information.en.html#noteworthy-obsolete-packages

@@ -10069,11 +10069,20 @@
     "_name": "Feeddd 公众号 RSS",
     ".": [
       {
-        "title": "公众号（feeddd 来源）",
+        "title": "Feeddd 公众号 RSS",
         "docs": "https://docs.rsshub.app/new-media.html#wei-xin",
         "source": [
-          "/"
+          "/feeds/:id"
         ]
+      }
+    ],
+    "api": [
+      {
+        "title": "Feeddd 公众号 RSS",
+        "source": [
+          "/feeds/:id"
+        ],
+        "target": "/wechat/feeddd/:id"
       }
     ]
   },
